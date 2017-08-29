@@ -1,0 +1,70 @@
+
+logging:
+#  level:
+#    root: WARN
+#    org.springframework.security: DEBUG
+  path: /opt/logs/
+  file: springbookCLI.log
+#logging:
+#  config: classpath:logback.xml
+spring:
+#  datasource:
+#    type: com.alibaba.druid.pool.DruidDataSource
+#    driver-class-name: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://127.0.0.1:3306/activiti?useUnicode=true&characterEncoding=utf8&&zeroDateTimeBehavior=convertToNull&autoReconnect=true
+#    username: root
+#    password: mysql
+  thymeleaf:
+    prefix: classpath:/templates/
+    check-template-location: true
+    suffix: .html
+    encoding: UTF-8
+    content-type: text/html
+    mode: HTML5
+    cache: false
+  session:
+    store-type: none
+#    编码
+  http:
+    encoding:
+      charset: UTF-8
+#      日期格式设置
+  mvc:
+    date-format: yyyy-MM-dd
+#    控制台颜色
+  output:
+    ansi:
+      enabled: detect
+#      默认激活 profile
+  profiles:
+    active: dev
+#    邮件设置
+  mail:
+    default-encoding: UTF-8
+    host: smtp.qq.com
+    username: 18240364@qq.com
+    password: 2017*Secret
+    properties.mail.smtp.auth: true
+    properties.mail.smtp.starttls.enable: true
+    properties.mail.smtp.starttls.required: true
+
+
+
+# https设置
+#      keytool -keystore mykeys.jks -genkey -alias tomcat -keyalg RSA
+server:
+  port: 8443
+  ssl:
+    key-store: /opt/mykeys.jks
+    key-password: letmein
+    key-store-password: letmein
+banner:
+  location: classpath:banner.txt
+
+# 分页插件设置
+#pagehelper:
+#  helper-dialect: mysql
+#  reasonable: true
+#  support-methods-arguments: true
+#  params: count=countSql
+
