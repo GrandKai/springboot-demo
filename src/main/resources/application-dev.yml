@@ -3,8 +3,7 @@ logging:
 #  level:
 #    root: WARN
 #    org.springframework.security: DEBUG
-  path: /opt/logs/
-  file: springbookCLI.log
+  file: ./log/springbookCLI.log
 #logging:
 #  config: classpath:logback.xml
 spring:
@@ -42,8 +41,8 @@ spring:
   mail:
     default-encoding: UTF-8
     host: smtp.qq.com
-    username: 18240364@qq.com
-    password: 2017*Secret
+    username: @qq.com
+    password:
     properties.mail.smtp.auth: true
     properties.mail.smtp.starttls.enable: true
     properties.mail.smtp.starttls.required: true
